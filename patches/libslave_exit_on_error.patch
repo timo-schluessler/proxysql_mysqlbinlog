@@ -1,0 +1,14 @@
+diff --git libslave/Slave.cpp libslave/Slave.cpp
+index 0fdeea2..8bfa4a4 100644
+--- libslave/Slave.cpp
++++ libslave/Slave.cpp
+@@ -527,6 +531,8 @@ connected:
+                         break;
+                 }
+
++                break; // reconnecting seems broken... better quit and re-start from the beginning
++
+                 __conn.connect(true);
+
+                 goto connected;
+
